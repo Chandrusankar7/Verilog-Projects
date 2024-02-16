@@ -1,0 +1,1 @@
+Whenever a DSP operation or high end operation has to be performed using Verilog, it takes more code density and the RTL abstraction consumes so much area and power, so in those cases High Level Synthesis is performed. This is an example of one such HLS operation which concentares on multiplication of operators with floating point.

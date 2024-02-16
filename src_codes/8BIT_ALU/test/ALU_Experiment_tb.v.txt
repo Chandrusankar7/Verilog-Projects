@@ -1,0 +1,29 @@
+
+module tb_alu ();
+reg [2:0]choice;
+reg [7:0] a, b;
+wire [7:0] ALU_OUT;
+initial
+begin
+choice = 3'b000;
+a=8'd2;
+b=8'd4;
+#10;
+choice = 3'b001;
+a=8'b10101010;
+#10;
+choice = 3'b010;
+a=8'd2;
+b=8'd4;
+#10;
+choice = 3'b011;
+a=8'b10101010;
+b=8'b10010010;
+#10;
+choice = 3'b100;
+a=8'd2;
+b=8'd4;
+#10;
+end
+alu inst0(.a(a), .b(b), .ALU_OUT(ALU_OUT), .choice(choice));
+endmodule

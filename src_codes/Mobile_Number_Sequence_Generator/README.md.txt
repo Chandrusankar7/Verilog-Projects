@@ -1,0 +1,1 @@
+This project concentrates on Design and synthesis a sequence generator using negative edge triggered JK flip flop for sequence of digits in your mobile number. [ if any digit repeats consider it only once - the first occurance ] Use BSAYS 3 FPGA, the output should be displayed on the seven segment display
