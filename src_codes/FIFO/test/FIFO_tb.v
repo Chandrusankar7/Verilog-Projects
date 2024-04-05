@@ -37,4 +37,6 @@ initial
         #10;
       end
   end
+
+  myfifo inst0(.clk(clk), .rst(rst), .rd_en(rd_en), .wr_en(wr_en), .data_in(data_in), .data_out(data_out), .FULL(FULL), .EMPTY(EMPTY))
 endmodule
