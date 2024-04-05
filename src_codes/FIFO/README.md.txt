@@ -1,0 +1,1 @@
+First In First Out model is used for read and writing of data with separate pointers so that user doesn't have control on the address location. This is a parameterised model with 4-bit data widt and 4-bit address with. both the read and write operations are synchronised with same clock cycle
