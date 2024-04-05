@@ -1,0 +1,1 @@
+Sequence detector for detetcing the sequence 11011 with six finite states
