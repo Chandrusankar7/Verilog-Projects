@@ -8,11 +8,7 @@ reg [2:1] ps, ns;
 always @(posedge clk)
     begin
     if (rst)
-        begin
-        ps<=IDLE;
-        data_out<=1'b0;
-        end
-        
+        ps<=IDLE;      
     else
         ps<=ns;
     end
@@ -21,6 +17,7 @@ always @(posedge clk)
     begin
     case (ps)
         IDLE: begin
+                data_out<=1'b0;             
               if (data_in==1'b0)
                 ns<=IDLE;
               
@@ -29,6 +26,7 @@ always @(posedge clk)
               end  
               
         GOT1: begin
+                data_out<=1'b0;              
               if (data_in==1'b0)
                 ns<=IDLE;
               
@@ -37,6 +35,7 @@ always @(posedge clk)
               end      
               
         GOT11: begin
+                data_out<=1'b0;              
               if (data_in==1'b0)
                 ns<=GOT110;
               
@@ -45,6 +44,7 @@ always @(posedge clk)
               end    
               
         GOT110: begin
+                data_out<=1'b0;              
               if (data_in==1'b0)
                 ns<=IDLE;
               
@@ -53,20 +53,16 @@ always @(posedge clk)
               end    
               
         GOT1101: begin
+                data_out<=1'b0;              
               if (data_in==1'b0)
-                begin
-                data_out<=1'b0;
                 ns<=IDLE;
-                end
               
               else
-                begin
-                data_out<=1'b1;
                 ns<=GOT11011;
-                end
               end   
               
         GOT11011: begin
+                data_out<=1'b1;            
               if (data_in==1'b0)
                 ns<=GOT110;
               
